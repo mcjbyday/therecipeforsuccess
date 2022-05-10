@@ -26,22 +26,22 @@ Meal.init(
       },
     },
     isGlutenFree: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
     },
     isNutFree: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
     },
     isVegan: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
     },
     isDairyFree: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
     },
     isPescatarian: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
     },
     isVegetarian: {
-      type: DataTypes.Boolean,
+      type: DataTypes.BOOLEAN,
     },
   },
   {
