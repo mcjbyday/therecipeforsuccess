@@ -1,0 +1,24 @@
+[
+  {
+    "title": "Taco Salad",
+    "description": "Base of greens, with seasoned ground beef, white rice, and roasted peppers and onions. Top with salsa and shredded cheese.",
+    "user_id": 1,
+    "isGlutenFree": true,
+    "isNutFree": true,
+    "isVegan": false,
+    "isDairyFree": true,
+    "isPescatarian": false,
+    "isVegetarian": false
+  },
+  {
+    "title": "Spring Rolls",
+    "description": "Finely slice veggies like cucumber, bell pepper, avocado, and carrots. Fry tofu in soy sauce. Dip rice paper in water, add your ingredients, and delicately roll. Enjoy with spicy peanut sauce (peanut, lime, sriracha).",
+    "user_id": 2,
+    "isGlutenFree": true,
+    "isNutFree": false,
+    "isVegan": true,
+    "isDairyFree": true,
+    "isPescatarian": true,
+    "isVegetarian": true
+  }
+]
