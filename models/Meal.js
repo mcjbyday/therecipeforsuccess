@@ -1,9 +1,9 @@
 const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
-class Project extends Model {}
+class Meal extends Model {}
 
-Project.init(
+Meal.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -11,24 +11,13 @@ Project.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false,
     },
     description: {
       type: DataTypes.STRING,
     },
-    date_created: {
-      type: DataTypes.DATE,
-      allowNull: false,
-      defaultValue: DataTypes.NOW,
-    },
-    needed_funding: {
-      type: DataTypes.FLOAT,
-      allowNull: false,
-    },
-    isGlutenFree
-    type: DataTypes
     user_id: {
       type: DataTypes.INTEGER,
       references: {
@@ -36,14 +25,32 @@ Project.init(
         key: 'id',
       },
     },
+    isGlutenFree: {
+      type: DataTypes.Boolean,
+    },
+    isNutFree: {
+      type: DataTypes.Boolean,
+    },
+    isVegan: {
+      type: DataTypes.Boolean,
+    },
+    isDairyFree: {
+      type: DataTypes.Boolean,
+    },
+    isPescatarian: {
+      type: DataTypes.Boolean,
+    },
+    isVegetarian: {
+      type: DataTypes.Boolean,
+    },
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'project',
+    modelName: 'meal',
   }
 );
 
-module.exports = Project;
+module.exports = Meal;
