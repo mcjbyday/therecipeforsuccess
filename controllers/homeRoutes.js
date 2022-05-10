@@ -1,31 +1,63 @@
 const router = require('express').Router();
 const { Meal, User } = require('../models');
 const withAuth = require('../utils/auth');
+const { Op } = require("sequelize");
 
 router.get('/', async (req, res) => {
   try {
-    // Get all meals and JOIN with user data
-    const mealData = await Meal.findAll({
-      include: [
-        {
-          model: User,
-          attributes: ['username'],
-        },
-      ],
-    });
-
+    // req.query: directly access the parsed query string parameters
+    // req.params: directly access the parsed route parameters from the path
+    let mealData;
+    // console.log(req.params)
+    // console.log(req.query)
+    // console.log(req.query)
+    if (Object.keys(req.query).length == 0) {
+        console.log("Your req.query doesn't exist")
+        // Get all meals and JOIN with user data
+        mealData = await Meal.findAll({
+          include: [
+              {
+                  model: User,
+                  attributes: ['username'],
+                },
+              ],
+        });
+      }
+  else {
+        // convert req.query to array of objects that can then be queried on sequelize
+        console.log("Your req.query seems to exist")
+        console.log('here it is' + req.query);
+        var myFoodAttributes = [req.query]
+        console.log(myFoodAttributes)
+        // Get all meals and JOIN with user data
+        mealData = await Meal.findAll({
+          include: [
+            {
+              model: User,
+              attributes: ['username'],
+            },
+          ],
+          where: {
+            [Op.and]: myFoodAttributes
+          }
+        });
+      }
+            
     // Serialize data so the template can read it
-    const meals = mealData.map((meal) => meal.get({ plain: true }));
+    let meals = mealData.map((meal) => meal.get({ plain: true }));
 
     // Pass serialized data and session flag into template
+    
     res.render('homepage', { 
       meals, 
       logged_in: req.session.logged_in 
     });
   } catch (err) {
+    console.log(err)
     res.status(500).json(err);
   }
 });
+
 
 router.get('/meal/:id', async (req, res) => {
   try {
