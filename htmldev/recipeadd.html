@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Add Recipe - The Recipe for Success</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,400,700" rel="stylesheet">
+    <!-- Bulma Version 0.9.0-->
+    <link rel="stylesheet" href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css" />
+    <link rel="stylesheet" type="text/css" href="../css/admin.css">
+    <link rel="stylesheet" href="./assests/css/jass.css">
+    <link rel="stylesheet" href="./assests/css/style.css">
+</head>
+
+<body>
+
+    <!-- START NAV -->
+    <nav class="navbar is-white">
+        <div class="container">
+            <div class="navbar-brand">
+                <a class="navbar-item brand-text" href="../index.html">
+                    The Recipe for Success
+        </a>
+                <div class="navbar-burger burger" data-target="navMenu">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+            <div id="navMenu" class="navbar-menu">
+                <div class="navbar-start">
+                    <a class="navbar-item" href="admin.html">
+            Home
+          </a>
+                    <a class="navbar-item" href="admin.html">
+            Logout
+          </a>
+                </div>
+
+            </div>
+        </div>
+    </nav>
+    <!-- END NAV -->
+    <div class="container">
+        <div class="columns">
+            <div class="column is-3 ">
+                <aside class="menu is-hidden-mobile">
+                    <p class="menu-label">
+                        Recipes
+                    </p>
+                    <ul class="menu-list">
+                        <li><a class="is-active">View My Recipes</a></li>
+                        <li><a>Add A New Recipe</a></li>
+                    </ul>
+                </aside>
+            </div>
+            <div class="column is-9">
+                <section class="hero is-info welcome is-small">
+                    <div class="hero-body">
+                        <div class="container">
+                            <h1 class="title">
+                                Hello, The Recipe for Success User!
+                            </h1>
+                            <h2 class="subtitle">
+                                Add your recipe here!
+                            </h2>
+                        </div>
+                    </div>
+                </section>
+                <section class="section">
+                    <div class="container has-text-centered">
+                        <h2 class="title">Recipe Details</h2>            
+                        <form>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field">
+                                        <p class="control has-icons-left">
+                                            <input class="input" type="text" placeholder="Recipe Name">
+                                            <span class="icon is-small is-left">
+                                                <i class="fas fa-user"></i>
+                                            </span>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+            
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <textarea class="textarea" placeholder="Instructions for the new Recipe"></textarea>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="checkBoxes">
+                                <h2>What allergies or preferences?</h2>
+                                <label class="checkbox" id="nutFreeCheckBox">
+                                    <input type="checkbox">
+                                    Nut Free(does not contain nuts)
+                                </label>
+                                <label class="checkbox" id="dairyFreeCheckBox">
+                                    <input type="checkbox">
+                                    Dairy Free(does not contain dairy)
+                                </label>
+                                <label class="checkbox" id="glutenFreeCheckBox">
+                                    <input type="checkbox">
+                                    Gluten Free(does not contain wheat)
+                                </label>
+                                <label class="checkbox" id="veganCheckBox">
+                                    <input type="checkbox">
+                                    Vegan(does not contain any animal products whatsoever)
+                                </label>
+                                <label class="checkbox" id="vegetarianCheckBox">
+                                    <input type="checkbox">
+                                    Vegetarian(no meat)
+                                </label>
+                                <label class="checkbox" id="pescatarianCheckBox">
+                                    <input type="checkbox">
+                                    Pescatarian(no meat other than fish)
+                                </label>
+                            </div>
+                            <div class="field is-horizontal">
+                                <div class="field-body">
+                                    <div class="field">
+                                        <div class="control">
+                                            <button class="button is-primary">
+                                                Submit New Recipe!
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+    <script async type="text/javascript" src="../js/bulma.js"></script>
+</body>
+
+</html>
