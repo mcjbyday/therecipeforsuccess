@@ -19,6 +19,8 @@
       href="https://unpkg.com/bulma@0.9.0/css/bulma.min.css"
     />
     <link rel="stylesheet" type="text/css" href="../css/admin.css" />
+    <link rel="stylesheet" href="./assests/css/jass.css">
+    <link rel="stylesheet" href="./assests/css/style.css">
   </head>
 
   <body>
@@ -97,7 +99,7 @@
                 <a href="#" aria-current="page">Admin</a>
               </li>
             </ul> -->
-            <div class="column is-6">
+            <div class="column is-10">
                 <!-- <div class="card">
                   <header class="card-header">
                     <p class="card-header-title">Recipe Search</p>
@@ -131,7 +133,7 @@
                 </div> -->            
           <!-- </nav> -->
 
-          <!-- <section class="hero is-info welcome is-small">
+          <section class="hero is-info welcome is-small">
             <div class="hero-body">
               <div class="container">
                 <h1 class="title">Hello, (UserNameHere).</h1>
@@ -139,7 +141,7 @@
               </div>
             </div>
           </section>
-          <section class="info-tiles">
+          <!-- <section class="info-tiles">
             <div class="tile is-ancestor has-text-centered">
               <div class="tile is-parent">
                 <article class="tile is-child box">
@@ -172,7 +174,7 @@
             <div class="column is-12">
               <div class="card events-card">
                 <header class="card-header">
-                  <p class="card-header-title">Foods</p>
+                  <p class="card-header-title">Meals with your preferences</p>
                   <a
                     href="#"
                     class="card-header-icon"
@@ -183,95 +185,45 @@
                     </span>
                   </a>
                 </header>
-                <div class="card-table">
-                  <div class="content">
-                    <table class="table is-fullwidth is-striped">
-                      <tbody>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Nachos</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Spaghetti</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Nachos</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Spaghetti</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Lorum ipsum dolem aire</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Lorum ipsum dolem aire</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Lorum ipsum dolem aire</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Lorum ipsum dolem aire</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                        <tr>
-                          <td width="5%"><i class="fa fa-bell-o"></i></td>
-                          <td>Lorum ipsum dolem aire</td>
-                          <td class="level-right">
-                            <a class="button is-small is-primary" href="#"
-                              >Action</a
-                            >
-                          </td>
-                        </tr>
-                      </tbody>
-                    </table>
+                <div class="container">
+                  <div class="section">
+                    <!-- <div class="columns">
+                      <div class="column has-text-centered">
+                        <h1 class="title" style="color: ghostwhite;">Bulma Card Layout Template</h1><br>
+                      </div>
+                    </div> -->
+                    <div id="app" class="row columns is-multiline">
+                      <div v-for="card in cardData" key="card.id" class="column is-4">
+                        <div class="card large">
+                          <div class="card-image">
+                            <figure class="image is-16by9">
+                              <img :src="card.image" alt="Image">
+                            </figure>
+                          </div>
+                          <div class="card-content">
+                            <div class="media">
+                              <div class="media-left">
+                                <figure class="image is-48x48">
+                                  <img :src="card.avatar" alt="Image">
+                                </figure>
+                              </div>
+                              <div class="media-content">
+                                <p class="title is-4 no-padding">{{card.user.title}}</p>
+                                <p>
+                                  <span class="title is-6">
+                                    <a :href=`http://twitter.com/${card.user.handle}`> {{card.user.handle}} </a> </span> </p>
+                                <p class="subtitle is-6">{{card.user.title}}</p>
+                              </div>
+                            </div>
+                            <div class="content">
+                              {{card.content}}
+                              <div class="background-icon"><span class="icon-twitter"></span></div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
                 <footer class="card-footer">
                   <a href="#" class="card-footer-item">View All</a>
                 </footer>
