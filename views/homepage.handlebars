@@ -30,15 +30,15 @@
           <div class="card events-card">
             <header class="card-header">
               <p class="card-header-title">Meals with your preferences</p>
-              <a href="#" class="card-header-icon" aria-label="more options">
+              {{!-- <a href="#" class="card-header-icon" aria-label="more options">
                 <span class="icon">
                   <i class="fa fa-angle-down" aria-hidden="true"></i>
-                </span>
+                </span> --}}
               </a>
             </header>
             <div class="container">
               <div class="section">
-                <div id="app" class="row columns is-multiline">
+                <div id="app" class="row columns allView">
                   {{#each meals as |meal|}}
                   <div v-for="card in cardData" key="card.id" class="column is-4">
                     <div class="card large">
@@ -83,3 +83,4 @@
     </div>
   </div>
 </div>
+<script src="../../js/cardsData.js"></script>
