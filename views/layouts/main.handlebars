@@ -1,4 +1,4 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html>
 
 <head>
@@ -33,10 +33,10 @@
           <div class="navbar-start">
             <a class="navbar-item" href="/"> Home </a>
             {{#if logged_in}}
-            <a class="navbar-item" href="/login"> Login </a>
-            {{else}}
-            <a class="navbar-item" href="/profile"> My Recipe Home </a>
+             <a class="navbar-item" href="/profile"> My Recipe Home </a>
             <a class="navbar-item" id="logout" href=""> Logout </a>
+            {{else}}
+            <a class="navbar-item" href="/login"> Login </a>           
             {{/if}}
           </div>
         </div>
