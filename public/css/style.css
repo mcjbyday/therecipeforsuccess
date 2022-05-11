@@ -29,4 +29,5 @@ header, .project:not(:last-child) {
   flex-direction: row;
   justify-content: center;
   max-height: 0px;
+  margin-bottom: 15px;
 }
