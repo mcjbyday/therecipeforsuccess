@@ -4,15 +4,16 @@
     <div class="column is-3">
       <aside class="menu is-hidden-mobile">
         <p class="menu-label">Allergies or Preferences</p>
-        <ul class="menu-list">
-          <li><a class="is-active">View All</a></li>
-          <li><a class="dietaryCriteria">Dairy Free <span><input type="checkbox" id="dairyFreeCheckBox" name="isDairyFree"></span></a></li>
-          <li><a class="dietaryCriteria">Gluten Free <span><input type="checkbox" id="glutenFreeCheckBox" name="isGlutenFree"></span></a></li>
-          <li><a class="dietaryCriteria">Nut Free <span><input type="checkbox" id="nutFreeCheckBox" name="isNutFree"></span></a></li>
-          <li><a class="dietaryCriteria">Pescatarian <span><input type="checkbox" id="PescatarianCheckBox" name="isPescatarian"></span></a></li>
-          <li><a class="dietaryCriteria">Vegan <span><input type="checkbox" id="veganCheckBox" name="isVegan"></span></a></li>
-          <li><a class="dietaryCriteria">Vegetarian <span><input type="checkbox" id="vegetarianCheckBox" name="isVegetarian"></span></a></li>
+        <ul class="menu-list" id="dietaryCriteria">
+          <li><a id="viewAllButton" class="is-active">View All</a></li>
+          <li><a><label for="dairyFreeCheckBox">Dairy Free</label> <span><input value="dairyFree" type="checkbox" id="dairyFreeCheckBox" name="isDairyFree"></span></a></li>
+          <li><a><label for="glutenFreeCheckBox">Gluten Free</label> <span><input type="checkbox" id="glutenFreeCheckBox" name="isGlutenFree"></span></a></li>
+          <li><a><label for="nutFreeCheckBox">Nut Free</label> <span><input type="checkbox" id="nutFreeCheckBox" name="isNutFree"></span></a></li>
+          <li><a><label for="pescatarianCheckBox">Pescatarian</label> <span><input type="checkbox" id="pescatarianCheckBox" name="isPescatarian"></span></a></li>
+          <li><a><label for="veganCheckBox">Vegan</label> <span><input type="checkbox" id="veganCheckBox" name="isVegan"></span></a></li>
+          <li><a><label for="vegetarianCheckBox">Vegetarian</label> <span><input type="checkbox" id="vegetarianCheckBox" name="isVegetarian"></span></a></li>
         </ul>
+        <input class="button" id="preferencesBtn" type="submit" value="Find meals">
       </aside>
     </div>
     <div class="column is-10">
@@ -84,3 +85,4 @@
   </div>
 </div>
 
+<script src="/js/filterMeals.js"></script>
