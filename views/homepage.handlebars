@@ -18,7 +18,7 @@
     </div>
     <div class="column is-10">
       <section class="hero is-info welcome is-small">
-        <div class="hero-body">
+        <div class="centerText hero-body">
           <div class="container is-14">
             {{!-- <h1 class="title">Hello, (UserNameHere).</h1>
             <h2 class="subtitle">I hope you are having a great day!</h2> --}}
@@ -29,15 +29,15 @@
       <div class="columns">
         <div class="column is-12">
           <div class="card events-card">
-            <header class="card-header">
-              <p class="card-header-title">Meals with your preferences</p>
+            <header class="card-header centerContent">
+              <p class="card-header-title centerText">Meals with your preferences</p>
               </a>
             </header>
             <div class="container">
               {{#each meals as |meal|}}
               <div class="section allView">                
                 <div id="app" class="row">                  
-                  <div v-for="card in cardData" key="card.id" class="column is-16">
+                  <div v-for="card in cardData" key="card.id" class="column">
                     <div class="card large">
                       <div class="card-image">
                       </div>
