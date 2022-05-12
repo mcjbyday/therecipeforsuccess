@@ -1,29 +1,20 @@
-<div class="container">
-        <div class="columns">
-            <div class="column is-3 ">
-                <aside class="menu is-hidden-mobile">
-                    <p class="menu-label">
-                        Recipes
-                    </p>
-                    <ul class="menu-list">
-                        <li><a class="is-active" href="/profile">View My Recipes</a></li>
-                        <li><a href="/addARecipe">Add A New Recipe</a></li>
-                    </ul>
-                </aside>
-            </div>
-            <div class="column is-9">
-                <section class="hero is-info welcome is-small">
-                    <div class="hero-body">
-                        <div class="container">
-                            <h1 class="title">
-                                Hello, The Recipe for Success User!
-                            </h1>
-                            <h2 class="subtitle">
-                                View your recipes here!
-                            </h2>
-                        </div>
-                    </div>
-                </section>
-            </div>
-        </div>
-    </div>
+{{#if meals.length}}
+                            <div class="col-md-6 meal-list">
+                                <h3>Your Posts:</h3>
+                                {{#each meals as |meal|}}
+                                <div class="row mb-2">
+                                <div class="col-md-6">
+                                    <h4><a href="/meal/{{meal.id}}">{{meal.title}}</a></h4>
+                                </div>
+                                        {{!-- <div class="col-md-3">
+                                        <button id="edit" type="submit" class="btn" data-id="{{meal.id}}"><a class="link" href="/edit/{{meal.id}}">EDIT</a></button> --}}
+                                    {{!-- <button id="edit" class="btn btn-sm btn-alert" data-id="{{meal.id}}">EDIT</button> --}}
+                                {{!-- </div>
+                                <div class="col-md-3">
+                                    <button id="delete" class="btn btn-sm btn-danger" data-id="{{meal.id}}">DELETE</button>
+                                </div> --}}
+                                {{!-- </div> --}}
+                                {{/each}}
+                            </div>
+                            {{/if}}
+                            </div>
