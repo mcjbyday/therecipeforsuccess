@@ -73,6 +73,9 @@ a:hover {
 .cardMargin {
   margin-right: 2px;
 }
+.cardMargin2 {
+  margin-right: 50px;
+}
 
 .centerText {
   text-align: center;
@@ -91,3 +94,7 @@ a:hover {
 .noFlex {
   display: inline-block;
 }
+
+/* .border {
+  border: 2px solid black;
+} */
