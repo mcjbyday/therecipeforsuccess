@@ -14,9 +14,12 @@ header, .project:not(:last-child) {
 
 .no-button:hover {
   color: #065b83;
-  text-decoration: underline;
+  text-decoration: none;
 }
 
+a:hover {
+  text-decoration: none;
+}
 .dollar-amount {
   color: #056605;
   font-weight: bold;
