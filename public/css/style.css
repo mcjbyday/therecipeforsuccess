@@ -65,6 +65,11 @@ a:hover {
   color:#1b89bc;
 }
 
+#colorRed {
+  background-color: #bc1b49;
+  /* color: #bc1b49; */
+}
+
 .cardMargin {
   margin-right: 2px;
 }
