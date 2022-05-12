@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
     let mealData;
 
     if (Object.keys(req.query).length == 0) {
-        console.log("\n ******* Your req.query doesn't exist, all meals coming your way *******\n")
         // Get all meals and JOIN with user data
         mealData = await Meal.findAll({
           include: [

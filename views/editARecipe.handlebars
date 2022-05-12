@@ -25,7 +25,7 @@
                     </div>
                 </div>
             </section>
-{{!-- form section begins here --}}
+            {{!-- form section begins here --}}
             <section class="section">
                 <div class="container has-text-centered">
                     <h2 class="title">Recipe Details</h2>
@@ -55,6 +55,33 @@
                         </div>
                         <div class="checkBoxes">
                             <h2>What allergies or preferences?</h2>
+                            <label class="checkbox" id="nutFreeCheckBox" {{#if isNutFree}}checked{{/if}}>
+                                <input id="isNutFree" type="checkbox">
+                                Nut Free(does not contain nuts)
+                            </label>
+                            <label class="checkbox" id="dairyFreeCheckBox">
+                                <input id="isDairyFree" type="checkbox" {{#if isDairyFree}}checked{{/if}}>
+                                Dairy Free(does not contain dairy)
+                            </label>
+                            <label class="checkbox" id="glutenFreeCheckBox">
+                                <input id="isGlutenFree" type="checkbox" {{#if isGlutenFree}}checked{{/if}}>
+                                Gluten Free(does not contain wheat)
+                            </label>
+                            <label class="checkbox" id="veganCheckBox">
+                                <input id="isVegan" type="checkbox" {{#if isVegan}}checked{{/if}}>
+                                Vegan(does not contain any animal products whatsoever)
+                            </label>
+                            <label class="checkbox" id="vegetarianCheckBox">
+                                <input id="isVegetarian" type="checkbox" {{#if isVegetarian}}checked{{/if}}>
+                                Vegetarian(no meat)
+                            </label>
+                            <label class="checkbox" id="pescatarianCheckBox">
+                                <input id="isPescatarian" type="checkbox" {{#if isPescatarian}}checked{{/if}}>
+                                Pescatarian(no meat other than fish)
+                            </label>
+                        </div>
+                        {{!-- <div class="checkBoxes">
+                            <h2>What allergies or preferences?</h2>
                             <label class="checkbox" id="nutFreeCheckBox">
                                 <input id="isNutFree" type="checkbox">
                                 Nut Free(does not contain nuts)
@@ -79,7 +106,7 @@
                                 <input id="isPescatarian" type="checkbox">
                                 Pescatarian(no meat other than fish)
                             </label>
-                        </div>
+                        </div> --}}
                         <div class="field is-horizontal">
                             <div class="field-body">
                                 <div class="field">
@@ -92,7 +119,7 @@
                     </form>
                 </div>
             </section>
-{{!-- form section ends here --}}
+            {{!-- form section ends here --}}
         </div>
     </div>
 </div>
