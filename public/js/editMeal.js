@@ -4,13 +4,13 @@ const updateButtonHandler = async (event) => {
   
     const title = document.querySelector('#meal-name').value.trim();
     // const needed_funding = document.querySelector('#meal-funding').value.trim();
-    const post_body = document.querySelector('#meal-desc').value.trim();
-    const meal_id = document.querySelector('input[name="post-id"]').value;
+    const description = document.querySelector('#meal-details').value.trim();
+    const meal_id = parseInt(document.location.pathname.split("/").slice(-2));
   
-    if (title && post_body && meal_id) {
+    if (title && description && meal_id) {
       const response = await fetch(`/api/meals/${meal_id}`, {
         method: 'PUT',
-        body: JSON.stringify({ title, post_body }),
+        body: JSON.stringify({ title, description }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -27,7 +27,7 @@ const updateButtonHandler = async (event) => {
   
   
   document
-    .querySelector('#updateTopicBtn')
+    .querySelector('#updateMealBtn')
     .addEventListener('click', updateButtonHandler);
   
   
