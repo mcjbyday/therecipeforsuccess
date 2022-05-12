@@ -2,12 +2,12 @@
   <div class="columns is-multiline">
     <div class="column is-12 register">
       <div class="columns cardMargin">
-        <div class="column is-3">
+        <div class="column is-3 border cardMargin2">
           <h3 class="title is-4">{{title}}</h3>
           <h4 class="subtitle colorLightBlue is-5">Created by {{user.username}}</h2>
             <p>{{{description}}}</p>
         </div>
-        <div class="column is-4 has-text-centered">
+        <div class="column is-4 has-text-centered border cardMargin2">
           <h3 class="title is-5">Alergies and Prefereneces</h1>
             {{#if isGlutenFree}}
             <p>Gluten Free!</p>
@@ -28,7 +28,7 @@
             <p>Pescatarian!</p>
             {{/if}}
         </div>
-        <div class="column is-4">
+        <div class="column is-4 border">
           <h3 class="title is-5">Enjoy this randomly generated cocktail with your meal...!</h3>
           <h3 id="drinkName" class="title colorLightBlue is-5"></h3>
           <img id="drinkImg"
@@ -44,7 +44,7 @@
 <style>
   :root {
     --brandColor: hsl(166, 67%, 51%);
-    --background: rgb(247, 247, 247);
+    --background: #ECF0F3;
     --textDark: hsla(0, 0%, 0%, 0.66);
     --textLight: hsla(0, 0%, 0%, 0.33);
   }
