@@ -22,46 +22,46 @@
     "isVegetarian": true
   },
   {
-    "title": "Dairy Free and Gluten Free",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit similique cupiditate velit officia laboriosam eaque culpa, recusandae quae incidunt consectetur?",
-    "user_id": 1,
+    "title": "Simple Salmon Bowl",
+    "description": "This salmon bowl recipe is the definition of a fast and easy dinner! Throw it all together with a killer sauce and prepare to be amazed.",
+    "user_id": 2,
     "isGlutenFree": true,
-    "isNutFree": false,
+    "isNutFree": true,
     "isVegan": false,
     "isDairyFree": true,
-    "isPescatarian": false,
+    "isPescatarian": true,
     "isVegetarian": false
   },
   {
-    "title": "Vegetarian Pescatarian and Nut Free",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit similique cupiditate velit officia laboriosam eaque culpa, recusandae quae incidunt consectetur?",
-    "user_id": 2,
-    "isGlutenFree": false,
+    "title": "Honey Garlic Shrimp",
+    "description": "This honey garlic shrimp is so irresistible, you’ll want to eat it every night! A sweet savory glaze covers succulent shrimp, and it’s done in 10 minutes.",
+    "user_id": 4,
+    "isGlutenFree": true,
     "isNutFree": true,
     "isVegan": false,
-    "isDairyFree": false,
+    "isDairyFree": true,
     "isPescatarian": true,
-    "isVegetarian": true
+    "isVegetarian": false
   },
   {
-    "title": "NutFree Vegan DairyFree",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit similique cupiditate velit officia laboriosam eaque culpa, recusandae quae incidunt consectetur?",
-    "user_id": 2,
-    "isGlutenFree": false,
+    "title": "Epic Vegetarian Fajitas",
+    "description": "This is an easy vegetarian fajitas recipe! This Tex Mex dinner is full of big flavor and beautiful colorful veggies. ",
+    "user_id": 3,
+    "isGlutenFree": true,
     "isNutFree": true,
     "isVegan": true,
     "isDairyFree": true,
     "isPescatarian": false,
-    "isVegetarian": false
+    "isVegetarian": true
   },
   {
-    "title": "GlutenFree NutFree Vegetarian",
-    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit similique cupiditate velit officia laboriosam eaque culpa, recusandae quae incidunt consectetur?",
-    "user_id": 2,
+    "title": "Ultimate Vegan Chili",
+    "description": "Wow, is this the BEST vegan chili! It’s bursting with flavor and is totally plant based. Dollop with vegan sour cream and load with toppings!",
+    "user_id": 3,
     "isGlutenFree": true,
     "isNutFree": true,
-    "isVegan": false,
-    "isDairyFree": false,
+    "isVegan": true,
+    "isDairyFree": true,
     "isPescatarian": false,
     "isVegetarian": true
   }
