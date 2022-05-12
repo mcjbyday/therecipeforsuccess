@@ -11,7 +11,7 @@ router.post('/', withAuth, async (req, res) => {
 
     res.status(200).json(newMeal);
   } catch (err) {
-    res.status(400).json(err);
+    res.status(400).json(err.message);
   }
 });
 
