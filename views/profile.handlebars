@@ -28,14 +28,14 @@
                 <div class="column is-12">
                     <div class="card events-card">
                         <header class="card-header">
-                            <p class="card-header-title">Meals you've created</p>
+                            <p class="centerText card-header-title noFlex">Meals you've created</p>
                             </a>
                         </header>
                         <div class="container">
                             {{#each meals as |meal|}}
                             <div class="section allView">
                                 <div id="app" class="row">
-                                    <div v-for="card in cardData" key="card.id" class="column is-16">
+                                    <div v-for="card in cardData" key="card.id" class="column">
                                         <div class="card large">
                                             <div class="card-image">
                                             </div>
