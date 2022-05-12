@@ -4,13 +4,23 @@ const newMealHandler = async (event) => {
   
     const title = document.querySelector('#meal-name').value.trim();
     console.log(title);
-    const mealDetails = document.querySelector('#meal-details').value.trim();
-    console.log(mealDetails);
+    const description = document.querySelector('#meal-details').value.trim();
+    console.log(description);
+    
+    const checkboxNodelist = document.querySelectorAll('.checkBoxes input:checked')
+    const checkboxArray =  [...checkboxNodelist];
+    console.log(checkboxArray);
+
+    let propObj = {};
+    for (let i = 0; i < checkboxArray.length; i++) {
+        propObj[checkboxArray[i].id] = true;
+    }
+    console.log(propObj);
   
-    if (title && mealDetails) {
+    if (title && description) {
       const response = await fetch(`/api/meals`, {
         method: 'POST',
-        body: JSON.stringify({ title, mealDetails }),
+        body: JSON.stringify({ title, description, ...propObj }),
         headers: {
           'Content-Type': 'application/json',
         },
@@ -28,3 +38,5 @@ const newMealHandler = async (event) => {
   document
   .querySelector('.new-meal-form')
   .addEventListener('submit', newMealHandler);
+
+  document.querySelectorAll('.checkBoxes input:checked')
