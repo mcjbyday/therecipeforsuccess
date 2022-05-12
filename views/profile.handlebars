@@ -1,72 +1,89 @@
 <div class="container">
-        <div class="columns">
-            <div class="column is-3 ">
-                <aside class="menu is-hidden-mobile">
-                    <p class="menu-label">
-                        Recipes
-                    </p>
-                    <ul class="menu-list">
-                        <li><a class="is-active" href="/profile">View My Recipes</a></li>
-                        <li><a href="/addARecipe">Add A New Recipe</a></li>
-                    </ul>
-                </aside>
-            </div>
-            <div class="column is-9">
-                <section class="hero is-info welcome is-small">
-                    <div class="hero-body">
-                        <div class="container">
-                            <h1 class="title">
-                                Hello, {{username}}!
-                            </h1>
-                            <h2 class="subtitle">
-                                View your recipes here!
-                            </h2>
-                        </div>
+    <div class="columns">
+        <div class="column is-3 ">
+            <aside class="menu is-hidden-mobile">
+                <p class="menu-label">
+                    Recipes
+                </p>
+                <ul class="menu-list">
+                    <li><a class="is-active" href="/profile">View My Recipes</a></li>
+                    <li><a href="/addARecipe">Add A New Recipe</a></li>
+                </ul>
+            </aside>
+        </div>
+        <div class="column is-9">
+            <section class="hero is-info welcome is-small">
+                <div class="hero-body">
+                    <div class="container">
+                        <h1 class="title">
+                            Hello, {{username}}!
+                        </h1>
+                        <h2 class="subtitle">
+                            View your recipes here!
+                        </h2>
                     </div>
-                </section>
-                <div class="columns">
-                    <div class="column is-12">
+                </div>
+            </section>
+            <div class="columns">
+                <div class="column is-12">
                     <div class="card events-card">
                         <header class="card-header">
-                        <p class="card-header-title">Meals you've created</p>
-                        </a>
+                            <p class="card-header-title">Meals you've created</p>
+                            </a>
                         </header>
                         <div class="container">
-                        {{#each meals as |meal|}}
-                        <div class="section allView">                
-                            <div id="app" class="row">                  
-                            <div v-for="card in cardData" key="card.id" class="column is-16">
-                                <div class="card large">
-                                <div class="card-image">
-                                </div>
-                                <div class="card-content">
-                                    <div class="media">
-                                    <div class="media-content">
-                                        <p class="title is-4 no-padding"><a href="/meal/{{meal.id}}"> {{meal.title}} </a></p>
-                                    </div>
-                                    </div>
-                                    <div class="content">
-                                    {{meal.description}}
+                            {{#each meals as |meal|}}
+                            <div class="section allView">
+                                <div id="app" class="row">
+                                    <div v-for="card in cardData" key="card.id" class="column is-16">
+                                        <div class="card large">
+                                            <div class="card-image">
+                                            </div>
+                                            <div class="card-content">
+                                                <div class="media">
+                                                    <div class="media-content">
+                                                        <p class="title is-4 no-padding"><a href="/meal/{{meal.id}}">
+                                                                {{meal.title}} </a></p>
+                                                    </div>
+                                                </div>
+                                                <div class="content">
+                                                    {{meal.description}}
+                                                    {{#if isGlutenFree}}
+                                                    <p>Gluten Free!</p>
+                                                    {{/if}}
+                                                    {{#if isNutFree}}
+                                                    <p>Nut Free!</p>
+                                                    {{/if}}
+                                                    {{#if isVegan}}
+                                                    <p>Vegan!</p>
+                                                    {{/if}}
+                                                    {{#if isDairyFree}}
+                                                    <p>Dairy Free!</p>
+                                                    {{/if}}
+                                                    {{#if isVegetarian}}
+                                                    <p>Vegetarian!</p>
+                                                    {{/if}}
+                                                    {{!-- <div class="form-group">
+                                                        <button class="btn btn-primary" type="submit">Edit</button>
+                                                    </div> --}}
+                                                </div>
+                                            </div>
+                                        </div>
                                         <div class="form-group">
-                                <button class="btn btn-primary" type="submit">Edit</button>
-                                </div>
-                                    </div>                                    
-                                </div>
-                                </div>                                
-                                    <div class="form-group">
-                                <button class="btn btn-primary" id="colorRed" type="submit">Delete</button>
+                                            <button class="btn btn-primary" id="colorRed" type="submit">Delete</button>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            </div>                
+                            {{/each}}
+                            {{!-- <footer class="card-footer">
+                                <a href="#" class="card-footer-item">View All</a>
+                            </footer> --}}
                         </div>
-                        {{/each}}
-                        {{!-- <footer class="card-footer">
-                            <a href="#" class="card-footer-item">View All</a>
-                        </footer> --}}
-                        </div>            
-                    </div>
                     </div>
                 </div>
             </div>
         </div>
-    </div>              </div>
+    </div>
+</div>
+</div>
