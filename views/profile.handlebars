@@ -66,6 +66,10 @@
                                                     {{#if isPescatarian}}
                                                     <p>Pescatarian!</p>
                                                     {{/if}}
+                                                    <div class="form-group">
+                                                        {{!-- <button class="postbuttons btn btn-secondary editTopicBtn" data-id="{{meal.id}}">Edit</button>--}}
+                                                        <button class="btn btn-danger deleteTopicBtn" data-id={{meal.id}} >Delete Recipe</button>
+                                                    </div>
                                                     {{!-- <div class="form-group">
                                                         <button class="btn btn-primary" type="submit">Edit</button>
                                                     </div> --}}
@@ -87,3 +91,5 @@
             </div>
         </div>
     </div>
+
+<script src="./js/profile.js"></script>
