@@ -3,16 +3,17 @@
   <div class="columns">
     <div class="column is-3">
       <aside class="menu is-hidden-mobile">
-        <p class="menu-label">Alergies or Preferneces</p>
-        <ul class="menu-list">
-          <li><a class="is-active">View All</a></li>
-          <li><a>Nut Free</a></li>
-          <li><a>Dairy Free</a></li>
-          <li><a>Gluten Free</a></li>
-          <li><a>Vegan</a></li>
-          <li><a>Vegetarian</a></li>
-          <li><a>Pescatarian</a></li>
+        <p class="menu-label">Allergies or Preferences</p>
+        <ul class="menu-list" id="dietaryCriteria">
+          <li><a id="viewAllButton" class="is-active">View All</a></li>
+          <li><a><label for="dairyFreeCheckBox">Dairy Free</label> <span><input value="dairyFree" type="checkbox" id="dairyFreeCheckBox" name="isDairyFree"></span></a></li>
+          <li><a><label for="glutenFreeCheckBox">Gluten Free</label> <span><input type="checkbox" id="glutenFreeCheckBox" name="isGlutenFree"></span></a></li>
+          <li><a><label for="nutFreeCheckBox">Nut Free</label> <span><input type="checkbox" id="nutFreeCheckBox" name="isNutFree"></span></a></li>
+          <li><a><label for="pescatarianCheckBox">Pescatarian</label> <span><input type="checkbox" id="pescatarianCheckBox" name="isPescatarian"></span></a></li>
+          <li><a><label for="veganCheckBox">Vegan</label> <span><input type="checkbox" id="veganCheckBox" name="isVegan"></span></a></li>
+          <li><a><label for="vegetarianCheckBox">Vegetarian</label> <span><input type="checkbox" id="vegetarianCheckBox" name="isVegetarian"></span></a></li>
         </ul>
+        <input class="button" id="preferencesBtn" type="submit" value="Find meals">
       </aside>
     </div>
     <div class="column is-10">
@@ -83,4 +84,6 @@
     </div>
   </div>
 </div>
+
+<script src="../../js/filterMeals.js"></script>
 <script src="../../js/cardsData.js"></script>

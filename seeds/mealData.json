@@ -20,5 +20,49 @@
     "isDairyFree": true,
     "isPescatarian": true,
     "isVegetarian": true
+  },
+  {
+    "title": "Dairy Free and Gluten Free",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit similique cupiditate velit officia laboriosam eaque culpa, recusandae quae incidunt consectetur?",
+    "user_id": 1,
+    "isGlutenFree": true,
+    "isNutFree": false,
+    "isVegan": false,
+    "isDairyFree": true,
+    "isPescatarian": false,
+    "isVegetarian": false
+  },
+  {
+    "title": "Vegetarian Pescatarian and Nut Free",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit similique cupiditate velit officia laboriosam eaque culpa, recusandae quae incidunt consectetur?",
+    "user_id": 2,
+    "isGlutenFree": false,
+    "isNutFree": true,
+    "isVegan": false,
+    "isDairyFree": false,
+    "isPescatarian": true,
+    "isVegetarian": true
+  },
+  {
+    "title": "NutFree Vegan DairyFree",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit similique cupiditate velit officia laboriosam eaque culpa, recusandae quae incidunt consectetur?",
+    "user_id": 2,
+    "isGlutenFree": false,
+    "isNutFree": true,
+    "isVegan": true,
+    "isDairyFree": true,
+    "isPescatarian": false,
+    "isVegetarian": false
+  },
+  {
+    "title": "GlutenFree NutFree Vegetarian",
+    "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit similique cupiditate velit officia laboriosam eaque culpa, recusandae quae incidunt consectetur?",
+    "user_id": 2,
+    "isGlutenFree": true,
+    "isNutFree": true,
+    "isVegan": false,
+    "isDairyFree": false,
+    "isPescatarian": false,
+    "isVegetarian": true
   }
 ]
