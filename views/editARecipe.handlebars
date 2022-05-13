@@ -17,7 +17,7 @@
                 <div class="hero-body">
                     <div class="container is-14">
                         <h1 class="title">
-                            Hello, {{meal.user.username}}!
+                            Hello, {{user.username}}!
                         </h1>
                         <h2 class="subtitle">
                             Edit recipe below...
@@ -29,12 +29,12 @@
             <section class="section">
                 <div class="container has-text-centered">
                     <h2 class="title">Recipe Details</h2>
-                    <form class="new-meal-form">
+                    <form class="update-meal-form">
                         <div class="field is-horizontal">
                             <div class="field-body">
                                 <div class="field">
                                     <p class="control has-icons-left">
-                                        <input id="meal-name" class="input" type="text" value="{{title}}" >
+                                        <input id="meal-name" class="input class="checkState"" type="text" value="{{title}}" >
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-user"></i>
                                         </span>
@@ -55,54 +55,54 @@
                         <div class="checkBoxes">
                             <h2>What allergies or preferences?</h2>
                             <label class="checkbox" id="nutFreeCheckBox">
-                                <input id="isNutFree" type="checkbox"{{#if isNutFree}}checked{{/if}}>
+                                <input class="checkState" id="isNutFree" type="checkbox"{{#if isNutFree}}checked{{/if}}>
                                 Nut Free(does not contain nuts)
                             </label>
                             <label class="checkbox" id="dairyFreeCheckBox">
-                                <input id="isDairyFree" type="checkbox" {{#if isDairyFree}}checked{{/if}}>
+                                <input class="checkState" id="isDairyFree" type="checkbox" {{#if isDairyFree}}checked{{/if}}>
                                 Dairy Free(does not contain dairy)
                             </label>
                             <label class="checkbox" id="glutenFreeCheckBox">
-                                <input id="isGlutenFree" type="checkbox" {{#if isGlutenFree}}checked{{/if}}>
+                                <input class="checkState" id="isGlutenFree" type="checkbox" {{#if isGlutenFree}}checked{{/if}}>
                                 Gluten Free(does not contain wheat)
                             </label>
                             <label class="checkbox" id="veganCheckBox">
-                                <input id="isVegan" type="checkbox" {{#if isVegan}}checked{{/if}}>
+                                <input class="checkState" id="isVegan" type="checkbox" {{#if isVegan}}checked{{/if}}>
                                 Vegan(does not contain any animal products whatsoever)
                             </label>
                             <label class="checkbox" id="vegetarianCheckBox">
-                                <input id="isVegetarian" type="checkbox" {{#if isVegetarian}}checked{{/if}}>
+                                <input class="checkState" id="isVegetarian" type="checkbox" {{#if isVegetarian}}checked{{/if}}>
                                 Vegetarian(no meat)
                             </label>
                             <label class="checkbox" id="pescatarianCheckBox">
-                                <input id="isPescatarian" type="checkbox" {{#if isPescatarian}}checked{{/if}}>
+                                <input class="checkState" id="isPescatarian" type="checkbox" {{#if isPescatarian}}checked{{/if}}>
                                 Pescatarian(no meat other than fish)
                             </label>
                         </div>
                         {{!-- <div class="checkBoxes">
                             <h2>What allergies or preferences?</h2>
                             <label class="checkbox" id="nutFreeCheckBox">
-                                <input id="isNutFree" type="checkbox">
+                                <input class="checkState" id="isNutFree" type="checkbox">
                                 Nut Free(does not contain nuts)
                             </label>
                             <label class="checkbox" id="dairyFreeCheckBox">
-                                <input id="isDairyFree" type="checkbox">
+                                <input class="checkState" id="isDairyFree" type="checkbox">
                                 Dairy Free(does not contain dairy)
                             </label>
                             <label class="checkbox" id="glutenFreeCheckBox">
-                                <input id="isGlutenFree" type="checkbox">
+                                <input class="checkState" id="isGlutenFree" type="checkbox">
                                 Gluten Free(does not contain wheat)
                             </label>
                             <label class="checkbox" id="veganCheckBox">
-                                <input id="isVegan" type="checkbox">
+                                <input class="checkState" id="isVegan" type="checkbox">
                                 Vegan(does not contain any animal products whatsoever)
                             </label>
                             <label class="checkbox" id="vegetarianCheckBox">
-                                <input id="isVegetarian" type="checkbox">
+                                <input class="checkState" id="isVegetarian" type="checkbox">
                                 Vegetarian(no meat)
                             </label>
                             <label class="checkbox" id="pescatarianCheckBox">
-                                <input id="isPescatarian" type="checkbox">
+                                <input class="checkState" id="isPescatarian" type="checkbox">
                                 Pescatarian(no meat other than fish)
                             </label>
                         </div> --}}
@@ -123,4 +123,4 @@
     </div>
 </div>
 
-<script src="/public/js/editMeal.js"></script>
+<script src="/js/editMeal.js"></script>
