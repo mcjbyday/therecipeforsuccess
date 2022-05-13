@@ -10,7 +10,6 @@ router.get('/', async (req, res) => {
     let mealData;
 
     if (Object.keys(req.query).length == 0) {
-        console.log("\n ******* Your req.query doesn't exist, all meals coming your way *******\n")
         // Get all meals and JOIN with user data
         mealData = await Meal.findAll({
           include: [
@@ -120,24 +119,28 @@ router.get('/addARecipe', withAuth, async (req, res) => {
   }
 });
 
-router.get('/editARecipe', withAuth, async (req, res) => {
+router.get('/meal/:id/edit', withAuth, async (req, res) => {
   try {
-    // Find the logged in user based on the session ID
-    const userData = await User.findByPk(req.session.user_id, {
-      attributes: { exclude: ['password'] },
-      include: [{ model: Meal }],
+    const mealData = await Meal.findByPk(req.params.id, {
+      include: [
+        {
+          model: User,
+          attributes: ['username'],
+        },
+      ],
     });
 
-    const user = userData.get({ plain: true });
+    const meal = mealData.get({ plain: true });
 
     res.render('editARecipe', {
-      ...user,
+      ...meal,
       logged_in: true
     });
   } catch (err) {
     res.status(500).json(err);
   }
 });
+
 
 router.get('/login', (req, res) => {
   // If the user is already logged in, redirect the request to another route
