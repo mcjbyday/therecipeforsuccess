@@ -31,10 +31,10 @@
                             <p class="centerText card-header-title noFlex">Meals you've created</p>
                             </a>
                         </header>
-                        <div class="container">
-                            {{#each meals as |meal|}}
-                            <div class="section allView">
-                                <div id="app" class="row">
+                        {{#each meals as |meal|}}
+                        <div class="container">                            
+                            <div class="section allView">                                
+                                <div id="app" class="row">                                    
                                     <div v-for="card in cardData" key="card.id" class="column">
                                         <div class="card large minWidth">
                                             <div class="card-image">
