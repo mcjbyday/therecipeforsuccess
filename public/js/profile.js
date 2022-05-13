@@ -30,11 +30,12 @@ function initializedEventListeners() {
     deleteButtons[i].addEventListener("click", delButtonHandler);
   }
 
+  let editButtons = document.querySelectorAll('.editTopicBtn');
 
-  document
-  .querySelector('.editTopicBtn')
-  .addEventListener('click', EditTopicBtnHandler);
-  
+  for (let i = 0; i < editButtons.length; i++) {
+    editButtons[i].addEventListener("click", EditTopicBtnHandler);
+  }
+
 
 }
 
