@@ -98,3 +98,7 @@ a:hover {
 /* .border {
   border: 2px solid black;
 } */
+
+.minWidth {
+  min-width: 100%;
+}
